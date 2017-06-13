@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+.header {
+    font-family: 'Inconsolata', monospace;
+}
+#map {
+    height: calc(100vh - 40px);
+}
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+/* Optional: Makes the sample page fill the window. */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 767px) {
+    #rohini {
+        height: 50vh;
+    }
+    #map {
+        height: calc(50vh - 15px);
+    }
+}
+.center {
+    text-align: center;
+}
+.no-padding {
+    padding: 0px;
+}

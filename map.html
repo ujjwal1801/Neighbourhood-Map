@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Simple Map</title>
+      <meta name="viewport" content="initial-scale=1.0">
+      <meta charset="utf-8">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class = "row">
+            <div id="rohini" class = "col-xs-12 col-sm-5 col-md-3 ">
+               <h1 class="center">Rohini Map</h1>
+               <div class="input-group col-xs-12 col-sm-12 col-md-12">
+                  <input id='msg' type="text" class="form-control" placeholder="Places" data-bind="value: sText, valueUpdate: 'afterkeydown',event:{keyup:searchIt}">
+                  <span class="input-group-btn">
+                     <!--<button  class="btn btn-default" type="button" data-bind="click: searchIt">Search</button>-->
+                  </span>
+               </div>
+               <!-- /input-group -->
+               <div class="list-group">
+                  <!-- ko foreach: rests -->
+                  <!-- ko if: show -->
+                  <a href="#" class="list-group-item" data-bind="text: title, click: $parent.minfo"></a>
+                  <!-- /ko -->
+                  <!-- /ko -->
+               </div>
+            </div>
+            <div class = "col-xs-12 col-sm-7 col-md-9 no-padding">
+               <div id="map">
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/libs/jquery-3.1.1.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="js/libs/knockout-3.4.1.js"></script>
+      <script src="js/places.js"></script>
+      <script src="js/main.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyfsK80_4-B_pXaRSLCF0cHJyWDCj2Iag&callback=initMap"
+         async defer onerror="mapError()"></script>
+   </body>
+</html>
